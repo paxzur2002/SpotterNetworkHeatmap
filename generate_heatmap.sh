@@ -1,3 +1,4 @@
+mkdir tmp/
 sh save_current_spotternetwork_db.sh
 cat tmp/spotternetwork_db.txt | sh awk_filter.sh > coordinates.csv
 cat coordinates.csv | grep -Eo '^[-0-9.]+,[-0-9.]+' > latlon.csv
